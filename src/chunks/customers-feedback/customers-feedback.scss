@@ -1,0 +1,142 @@
+@import "../../styles/utility/mixins";
+
+.customers-feedback {
+  background: url("chunks/customers-feedback/img/customers-feedback-bg.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: px-to-rem(60);
+  padding-bottom: px-to-rem(94);
+
+  @include ctx_tablet {
+    padding-top: px-to-rem(35);
+    padding-bottom: px-to-rem(35);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__quote {
+    position: relative;
+    width: 100%;
+    max-width: px-to-rem(920);
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: px-to-rem(35);
+
+    @include ctx_tablet {
+      max-width: unset;
+    }
+
+    @include ctx_tablet(landscape) {
+      width: 90%;
+    }
+  }
+
+  &__quote-image-item {
+    position: absolute;
+    top: 0;
+    left: -10rem;
+    z-index: 1;
+
+    @include ctx_tablet {
+      height: px-to-rem(320, $font-size-tablet);
+    }
+
+    @include ctx_mobile(landscape) {
+      height: px-to-rem(240, $font-size-mobile);
+    }
+
+    @include ctx_mobile(portrait) {
+      top: px-to-rem(30, $font-size-mobile);
+      left: 50%;
+      width: 60%;
+      height: auto;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__quote-image {
+    @include ctx_tablet {
+      max-width: unset;
+      height: 100%;
+    }
+
+    @include ctx_mobile(portrait) {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__quote-item {
+    position: relative;
+    width: 70%;
+    background-color: rgba(250, 250, 250, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: px-to-rem(95) px-to-rem(50) px-to-rem(95) px-to-rem(250);
+
+    @include ctx_tablet(landscape) {
+      padding: px-to-rem(50) px-to-rem(50) px-to-rem(50) px-to-rem(190);
+    }
+
+    @include ctx_tablet(portrait) {
+      padding: px-to-rem(70) px-to-rem(50) px-to-rem(50) px-to-rem(240);
+    }
+
+    @include ctx_mobile(portrait) {
+      width: 100%;
+      align-items: center;
+      padding: px-to-rem(230, $font-size-mobile) px-to-rem(30, $font-size-mobile) px-to-rem(30, $font-size-mobile);
+    }
+  }
+
+  &__quote-sign {
+    position: absolute;
+    top: px-to-rem(25);
+    right: px-to-rem(25);
+
+    @include ctx_mobile {
+      width: px-to-rem(60, $font-size-mobile);
+    }
+
+    @include ctx_mobile(portrait) {
+      top: 0;
+      right: unset;
+      left: px-to-rem(30, $font-size-mobile);
+      transform: translateY(-50%);
+    }
+  }
+
+  &__quote-title {
+    font-size: px-to-rem(28);
+
+    &-link {
+      color: #000000;
+    }
+  }
+
+  &__quote-subtitle,
+  &__quote-text {
+    color: #000000;
+    font-family: $roboto;
+    margin-top: px-to-rem(10);
+  }
+
+  &__quote-subtitle {
+    font-size: px-to-rem(20);
+  }
+
+  &__quote-text {
+    font-size: px-to-rem(18);
+    text-align: left;
+
+    @include ctx_mobile(portrait) {
+      text-align: center;
+    }
+  }
+}

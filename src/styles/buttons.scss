@@ -1,0 +1,32 @@
+@import "utility/mixins";
+
+.do-button {
+  border: px-to-rem(1) solid $prime-orange;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $mayeka-regular;
+  font-size: px-to-rem(18);
+  padding: px-to-rem(10.5) px-to-rem(30);
+  transition:
+    border-radius 0.3s ease-in-out,
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: rgba($prime-orange, 0.1);
+    border-color: lighten($prime-orange, 30%) lighten($prime-orange, 30%) $prime-orange lighten($prime-orange, 30%);
+    color: $prime-orange;
+  }
+
+  &_orange {
+    background-color: $prime-orange;
+    color: #ffffff;
+  }
+
+  &_transparent {
+    color: $prime-orange;
+  }
+}

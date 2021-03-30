@@ -1,0 +1,24 @@
+@mixin ctx_widescreen($orientation: all) {
+  $min-device-width: 375;
+  $min-device-height: 750;
+
+  @if $orientation == all {
+    @media (min-device-width: #{$min-device-width}px) and (min-device-height: #{$min-device-height}px),
+      (min-device-width: #{$min-device-height}px) and (min-device-height: #{$min-device-width}px) {
+      @content;
+    }
+  }
+
+  @else if $orientation == landscape {
+    @media (min-device-width: #{$min-device-height}px) and (min-device-height: #{$min-device-width}px) and (orientation: landscape),
+      (device-width: #{$min-device-width}px) and (device-height: #{$min-device-height}px) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @else if $orientation == portrait {
+    @media (min-device-width: #{$min-device-width}px) and (min-device-height: #{$min-device-height}px) and (orientation: portrait) {
+      @content;
+    }
+  }
+}

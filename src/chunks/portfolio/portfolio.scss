@@ -1,0 +1,141 @@
+@import "../../styles/utility/mixins";
+
+.main-carousel {
+  margin: 0 auto;
+  max-width: 1160px;
+}
+
+.carousel-cell {
+  width: 100%;
+  &__inner {
+    display: flex;
+
+    @media (max-width: 888px) {
+      flex-direction: column;
+    }
+  }
+  &__img-wrap {
+    img {
+      max-height: 574px;
+
+      @media (max-width: 888px) {
+        max-height: unset;
+      }
+    }
+  }
+  &__overview {
+    padding: 24px;
+    max-width: 400px;
+
+    @media (max-width: 888px) {
+      max-width: 100%;
+      padding: 24px 0;
+    }
+  }
+  &__caption {
+    font-family: $mayeka-regular;
+    font-size: px-to-rem(20);
+    margin-bottom: 16px;
+
+    @include ctx_mobile {
+      font-size: px-to-rem(17, $font-size-mobile);
+    }
+
+    @media (max-width: 888px) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    display: block;
+    text-align: left;
+    font-family: $mayeka-regular;
+  }
+
+  &__tech-title {
+    font-weight: 600;
+  }
+}
+
+.portfolio {
+  margin-top: px-to-rem(120);
+  .flickity-button {
+    background: transparent;
+
+    @media (max-width: 888px) {
+      display: none;
+    }
+  }
+
+  .flickity-prev-next-button.previous {
+    left: -45px;
+  }
+  .flickity-prev-next-button.next {
+    right: -45px;
+  }
+  .do-app-title__text {
+    margin-bottom: 1.25rem;
+  }
+}
+//  @include ctx_tablet {
+//    margin-top: px-to-rem(40);
+//  }
+//
+//  &__slider {
+//    display: flex;
+//    align-items: center;
+//    justify-content: space-between;
+//    margin-top: px-to-rem(90);
+//
+//    @include ctx_tablet {
+//      margin-top: px-to-rem(35);
+//    }
+//
+//    @include ctx_mobile(portrait) {
+//      display: grid;
+//      grid-column-gap: px-to-rem(15, $font-size-mobile);
+//      grid-row-gap: px-to-rem(15, $font-size-mobile);
+//      grid-template-areas:
+//        "slider-current slider-current"
+//        "slider-prev slider-next";
+//    }
+//  }
+//
+//  &__slider-item {
+//    &_prev,
+//    &_next {
+//      width: 20.833333333%;
+//      height: auto;
+//
+//      @include ctx_mobile(portrait) {
+//        width: 100%;
+//      }
+//    }
+//
+//    &_prev {
+//      grid-area: slider-prev;
+//    }
+//
+//    &_next {
+//      grid-area: slider-next;
+//    }
+//
+//    &_current {
+//      width: 70%;
+//      max-width: px-to-rem(800);
+//      height: auto;
+//      max-height: px-to-rem(600);
+//      grid-area: slider-current;
+//      margin: 0 px-to-rem(20);
+//
+//      @include ctx_mobile(landscape) {
+//        width: 55%;
+//      }
+//
+//      @include ctx_mobile(portrait) {
+//        width: 100%;
+//        margin: 0;
+//      }
+//    }
+//  }
+//}

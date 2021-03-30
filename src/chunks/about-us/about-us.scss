@@ -1,0 +1,111 @@
+@import "../../styles/utility/mixins";
+
+.about-us {
+  display: flex;
+  justify-content: center;
+  margin: 6.7% auto;
+  padding-bottom: px-to-rem(40);
+  overflow: hidden;
+
+  @include ctx_tablet(landscape) {
+    margin: px-to-rem(45) 0 0;
+  }
+
+  @include ctx_tablet(portrait) {
+    margin: px-to-rem(45) 0;
+  }
+
+  @include ctx_mobile(portrait) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: px-to-rem(520);
+    flex-basis: 50%;
+    margin-right: px-to-rem(70);
+    text-align: left;
+
+    @include ctx_tablet(portrait) {
+      margin-right: px-to-rem(35);
+    }
+
+    @include ctx_mobile(landscape) {
+      margin-right: px-to-rem(15, $font-size-mobile);
+    }
+
+    @include ctx_mobile(portrait) {
+      margin-top: px-to-rem(35, $font-size-mobile);
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+
+  &__image-item {
+    display: flex;
+    align-items: center;
+
+    @include ctx_tablet {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+
+    @include ctx_mobile(portrait) {
+      max-width: 80%;
+    }
+  }
+
+  &__image {
+    @include ctx_tablet {
+      max-width: unset;
+    }
+
+    @include ctx_mobile(portrait) {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    align-items: flex-start;
+
+    @include ctx_mobile(portrait) {
+      align-items: center;
+    }
+  }
+
+  &__number {
+    position: relative;
+    background-color: $prime-orange;
+    color: #ffffff;
+    display: inline-flex;
+    font-family: BebasNeue, sans-serif;
+    font-size: px-to-rem(18);
+    padding: px-to-rem(12) px-to-rem(7) px-to-rem(12) px-to-rem(23);
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 30%;
+      width: 45%;
+      height: px-to-rem(1);
+      background-color: #ffffff;
+      content: "";
+    }
+  }
+
+  &__text {
+    font-family: $roboto;
+    font-size: px-to-rem(18);
+    margin-top: px-to-rem(35);
+    padding-right: px-to-rem(90);
+
+    @media (max-width: 1366px) {
+      padding-right: 0;
+    }
+  }
+
+  &__button-set {
+    margin-top: px-to-rem(35);
+  }
+}

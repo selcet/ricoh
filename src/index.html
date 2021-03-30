@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140821264-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-140821264-1');
+  </script>
+
+  <title>Ricoh Portal</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="icon" type="image/ico" href="./favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="./web-manifest/icon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./web-manifest/icon-32x32.png">
+  <link rel="manifest" href="./web-manifest/manifest.json">
+</head>
+
+<body>
+  <div class="application" id="app">
+    <div class="application__header" do-include-html="./header.html">
+      ${require('./chunks/header/header.html')}
+    </div>
+    <!--
+    <div class="application__top-news" do-include-html="./top-news.html">
+      ${require('./chunks/top-news/top-news.html')}
+    </div>
+    <div class="application__about-us" do-include-html="./about-us.html">
+      ${require('./chunks/about-us/about-us.html')}
+    </div>
+    <div class="application__our-process" do-include-html="./our-process.html">
+      ${require('./chunks/our-process/our-process.html')}
+    </div>
+    <div class="application__technology" do-include-html="./technology.html">
+      ${require('./chunks/technology/technology.html')}
+    </div>
+    <div class="application__our-philosophy" do-include-html="./our-philosophy.html">
+      ${require('./chunks/our-philosophy/our-philosophy.html')}
+    </div>
+    <div class="application__our-services" do-include-html="./our-services.html">
+      ${require('./chunks/our-services/our-services.html')}
+    </div>
+    <div class="application__our-team" do-include-html="./our-team.html">
+      ${require('./chunks/our-team/our-team.html')}
+    </div>
+    <div class="application__customers-feedback" do-include-html="./customers-feedback.html">
+      ${require('./chunks/customers-feedback/customers-feedback.html')}
+    </div>
+    <div class="application__portfolio" do-include-html="./portfolio.html">
+      ${require('./chunks/portfolio/portfolio.html')}
+    </div>
+    <div class="application__contact-us" do-include-html="./contact-us.html">
+      ${require('./chunks/contact-us/contact-us.html')}
+    </div>
+    <div class="application__footer" do-include-html="./footer.html">
+      ${require('./chunks/footer/footer.html')}
+    </div>
+    -->
+  </div>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+@import "../../styles/utility/mixins";
+
+%footer-title {
+  font-family: $mayeka-regular;
+  font-size: px-to-rem(20);
+}
+
+%footer-text {
+  font-family: $roboto;
+  font-size: px-to-rem(18);
+  font-weight: 300;
+}
+
+.footer {
+  background-color: #414141;
+  padding-top: px-to-rem(70);
+  padding-bottom: px-to-rem(70);
+
+  @include ctx_mobile(portrait) {
+    padding-bottom: 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+
+    @include ctx_mobile(portrait) {
+      flex-direction: column;
+    }
+  }
+
+  &__section {
+    max-width: px-to-rem(610);
+    flex-basis: 50%;
+
+    &_left {
+      padding-right: px-to-rem(55);
+
+      @include ctx_tablet {
+        padding-right: px-to-rem(30);
+      }
+
+      @include ctx_mobile {
+        padding-right: 0;
+      }
+    }
+
+    &_right {
+      display: flex;
+      flex-wrap: wrap;
+      color: #ffffff;
+      padding-left: px-to-rem(55);
+
+      @include ctx_tablet {
+        justify-content: space-around;
+        padding-left: px-to-rem(30);
+      }
+
+      @include ctx_mobile {
+        justify-content: space-between;
+      }
+
+      @include ctx_mobile(portrait) {
+        margin-top: px-to-rem(30, $font-size-mobile);
+        margin-left: -4%;
+        margin-right: -4%;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__subscribe {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__subscribe-label {
+    @extend %footer-title;
+
+    flex-basis: 100%;
+    color: #ffffff;
+    cursor: pointer;
+    margin-bottom: px-to-rem(30);
+    text-align: left;
+
+    @include ctx_tablet {
+      margin-bottom: px-to-rem(20);
+    }
+  }
+
+  &__subscribe-input {
+    flex: 1;
+  }
+
+  &__subscribe-button-set {
+    margin-left: px-to-rem(15);
+
+    @include ctx_tablet(portrait) {
+      margin-top: px-to-rem(15);
+      margin-left: 0;
+    }
+
+    @include ctx_mobile(landscape) {
+      margin-left: px-to-rem(20, $font-size-mobile);
+    }
+
+    @include ctx_mobile(portrait) {
+      margin-top: 0;
+      margin-left: px-to-rem(15, $font-size-mobile);
+    }
+  }
+
+  &__social {
+    display: flex;
+    margin-top: px-to-rem(50);
+
+    @include ctx_mobile(portrait) {
+      justify-content: space-around;
+      margin-top: px-to-rem(50, $font-size-mobile);
+    }
+  }
+
+  &__social-item {
+    margin-right: px-to-rem(15);
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-30%);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__about {
+    color: #ffffff;
+    margin-top: px-to-rem(50);
+    text-align: left;
+  }
+
+  &__about-title {
+    @extend %footer-title;
+  }
+
+  &__about-text {
+    @extend %footer-text;
+
+    margin-top: px-to-rem(15);
+  }
+
+  &__contacts {
+    text-align: left;
+
+    @include ctx_mobile(portrait) {
+      margin-left: 4%;
+    }
+  }
+
+  &__contacts-title {
+    @extend %footer-title;
+  }
+
+  &__contacts-address {
+    @extend %footer-text;
+
+    line-height: 150%;
+    margin-top: px-to-rem(15);
+  }
+
+  &__menu {
+    margin-left: px-to-rem(120);
+    text-align: left;
+
+    @include ctx_tablet(portrait) {
+      margin-left: px-to-rem(40);
+    }
+
+    @include ctx_mobile {
+      margin-left: 0;
+      text-align: right;
+    }
+
+    @include ctx_mobile(portrait) {
+      margin-right: 4%;
+    }
+  }
+
+  &__menu-title {
+    @extend %footer-title;
+  }
+
+  &__menu-list {
+    @extend %footer-text;
+
+    display: flex;
+    flex-direction: column;
+    margin-top: px-to-rem(15);
+  }
+
+  &__menu-item {
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+      color 0.2s ease-in-out,
+      transform 0.3s ease-in-out;
+
+    &:hover {
+      color: $prime-orange;
+      transform: translateX(10%);
+    }
+  }
+
+  &__right-reserved {
+    @extend %footer-title;
+
+    display: flex;
+    align-items: flex-end;
+    flex-basis: 100%;
+    justify-content: flex-end;
+    text-align: right;
+
+    @include ctx_mobile(portrait) {
+      background-color: #363636;
+      justify-content: center;
+      margin-top: px-to-rem(30, $font-size-mobile);
+      padding: px-to-rem(10, $font-size-mobile) 0;
+      text-align: center;
+    }
+  }
+}
+
+.shake {
+  animation: shake-animation 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake-animation {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

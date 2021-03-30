@@ -1,0 +1,27 @@
+@mixin ctx_tablet($orientation: all) {
+  $max-device-width: 1024;
+  $max-device-height: 1366;
+
+  @if $orientation == all {
+    @media (max-device-width: #{$max-device-width}px) and (max-device-height: #{$max-device-height}px),
+      (max-device-width: #{$max-device-height}px) and (max-device-height: #{$max-device-width}px) {
+      @content;
+    }
+  }
+
+  @else if $orientation == landscape {
+    @media (max-device-width: #{$max-device-height}px)
+      and (max-device-height: #{$max-device-width}px)
+      and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @else if $orientation == portrait {
+    @media (max-device-width: #{$max-device-width}px)
+      and (max-device-height: #{$max-device-height}px)
+      and (orientation: portrait) {
+      @content;
+    }
+  }
+}
