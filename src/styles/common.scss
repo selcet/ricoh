@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  font-family: $mayeka-light;
+  font-family: $frutiger-light-arabic;
   text-align: center;
 }
 
@@ -22,9 +22,9 @@ body {
 }
 
 .container {
-  max-width: px-to-rem(1920);
+  max-width: px-to-rem(1440);
   margin: 0 auto;
-  padding: 0 5.8593%;
+  padding: 0 7.2917%;
 
   @include ctx_tablet {
     padding: 0 4%;

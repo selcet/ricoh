@@ -16,6 +16,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+  <!-- Font CDN -->
+  <link href="//db.onlinewebfonts.com/c/4d12bb5288f3fdd9ba9a39ba39562d21?family=FrutigerLTArabic-77BlackCn" rel="stylesheet" type="text/css"/>
+
   <link rel="icon" type="image/ico" href="./favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="./web-manifest/icon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./web-manifest/icon-32x32.png">
@@ -26,6 +30,9 @@
   <div class="application" id="app">
     <div class="application__header" do-include-html="./header.html">
       ${require('./chunks/header/header.html')}
+    </div>
+    <div class="application__navigation" do-include-html="./navigation.html">
+      ${require('./chunks/navigation/navigation.html')}
     </div>
     <!--
     <div class="application__top-news" do-include-html="./top-news.html">
