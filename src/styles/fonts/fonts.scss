@@ -1,60 +1,35 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
-@import url("https://db.onlinewebfonts.com/c/4d12bb5288f3fdd9ba9a39ba39562d21?family=FrutigerLTArabic-77BlackCn");
-
 @font-face {
-  font-family: FrutigerLTArabic;
+  font-family: FrutigerLTArabicLight;
   src:
-    url("https://db.onlinewebfonts.com/t/4d12bb5288f3fdd9ba9a39ba39562d21.eot?#iefix") format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/4d12bb5288f3fdd9ba9a39ba39562d21.woff2") format("woff2"),
-    url("https://db.onlinewebfonts.com/t/4d12bb5288f3fdd9ba9a39ba39562d21.woff") format("woff"),
-    url("https://db.onlinewebfonts.com/t/4d12bb5288f3fdd9ba9a39ba39562d21.ttf") format("truetype");
+    url("/styles/fonts/FrutigerLTArabic-45Light.eot") format("embedded-opentype"),
+    url("/styles/fonts/FrutigerLTArabic-45Light.woff2") format("woff2"),
+    url("/styles/fonts/FrutigerLTArabic-45Light.woff") format("woff"),
+    url("/styles/fonts/FrutigerLTArabic-45Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: mayeka-regular-demo;
+  font-family: FrutigerLTArabicRoman;
   src:
-    url("https://dafonttop.com/wp-data/m/396/396/file/mayeka.regular-demo.otf") format("woff"),
-    url("https://dafonttop.com/wp-data/m/396/396/file/mayeka.regular-demo.otf") format("opentype"),
-    url("https://dafonttop.com/wp-data/m/396/396/file/mayeka.regular-demo.otf") format("truetype");
+    url("/styles/fonts/FrutigerLTArabic-55Roman.eot") format("embedded-opentype"),
+    url("/styles/fonts/FrutigerLTArabic-55Roman.woff") format("woff2"),
+    url("/styles/fonts/FrutigerLTArabic-55Roman.woff") format("woff"),
+    url("/styles/fonts/FrutigerLTArabic-55Roman.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: mayeka-thin-demo;
+  font-family: FrutigerLTArabicBold;
   src:
-    url("https://dafonttop.com/wp-data/m/396/396/file/mayeka.thin-demo.otf") format("woff"),
-    url("https://dafonttop.com/wp-data/m/396/396/file/mayeka.thin-demo.otf") format("opentype"),
-    url("https://dafonttop.com/wp-data/m/396/396/file/mayeka.thin-demo.otf") format("truetype");
+    url("/styles/fonts/FrutigerLTArabic-65Bold.eot") format("embedded-opentype"),
+    url("/styles/fonts/FrutigerLTArabic-65Bold.woff") format("woff2"),
+    url("/styles/fonts/FrutigerLTArabic-65Bold.woff") format("woff"),
+    url("/styles/fonts/FrutigerLTArabic-65Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: mayeka-light-demo;
+  font-family: FrutigerLTArabicBlack;
   src:
-    url("https://dafonttop.com/wp-data/m/396/396/file/mayeka.light-demo.otf") format("woff"),
-    url("https://dafonttop.com/wp-data/m/396/396/file/mayeka.light-demo.otf") format("opentype"),
-    url("https://dafonttop.com/wp-data/m/396/396/file/mayeka.light-demo.otf") format("truetype");
-}
-
-@font-face {
-  font-family: mayeka-demi-bold-demo;
-  src:
-    url("https://dafonttop.com/wp-data/m/396/396/file/mayeka.demi-bold-demo.otf") format("woff"),
-    url("https://dafonttop.com/wp-data/m/396/396/file/mayeka.demi-bold-demo.otf") format("opentype"),
-    url("https://dafonttop.com/wp-data/m/396/396/file/mayeka.demi-bold-demo.otf") format("truetype");
-}
-
-@font-face {
-  font-family: mayeka-bold-demo;
-  src:
-    url("https://dafonttop.com/wp-data/m/396/396/file/mayeka.bold-demo.otf") format("woff"),
-    url("https://dafonttop.com/wp-data/m/396/396/file/mayeka.bold-demo.otf") format("opentype"),
-    url("https://dafonttop.com/wp-data/m/396/396/file/mayeka.bold-demo.otf") format("truetype");
-}
-
-@font-face {
-  font-family: BebasNeue;
-  src:
-    url("https://cdn.jsdelivr.net/npm/@typopro/web-bebas-neue@3.7.5/TypoPRO-BebasNeue-Regular.eot") format("embedded-opentype"),
-    url("https://cdn.jsdelivr.net/npm/@typopro/web-bebas-neue@3.7.5/TypoPRO-BebasNeue-Regular.woff") format("woff2"),
-    url("https://cdn.jsdelivr.net/npm/@typopro/web-bebas-neue@3.7.5/TypoPRO-BebasNeue-Regular.woff") format("woff"),
-    url("https://cdn.jsdelivr.net/npm/@typopro/web-bebas-neue@3.7.5/TypoPRO-BebasNeue-Regular.ttf") format("truetype");
+    url("/styles/fonts/FrutigerLTArabic-75Black.eot") format("embedded-opentype"),
+    url("/styles/fonts/FrutigerLTArabic-75Black.woff") format("woff2"),
+    url("/styles/fonts/FrutigerLTArabic-75Black.woff") format("woff"),
+    url("/styles/fonts/FrutigerLTArabic-75Black.ttf") format("truetype");
 }

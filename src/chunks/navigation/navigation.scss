@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 6.35% auto px-to-rem(33);
+  margin: 6.35% auto 0;
   will-change: margin;
   transition: margin 0.5s ease;
 
@@ -97,7 +97,7 @@
 
   &__menu-item {
     position: relative;
-    font-family: mayeka-regular-demo, sans-serif;
+    font-family: $frutiger-arabic-roman;
     color: #ffffff;
     cursor: pointer;
     display: inline-flex;

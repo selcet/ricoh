@@ -1,0 +1,61 @@
+@import "../../styles/utility/mixins";
+
+.top-banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: $prime-color;
+
+  @include ctx_mobile {
+    height: px-to-rem(400, $font-size-mobile);
+    padding: 0;
+  }
+
+  &__part {
+    width: 50%;
+
+    &_left {
+      display: inline-flex;
+      justify-content: flex-end;
+    }
+
+    &_right {
+      background: url("chunks/top-banner/img/technician-touch-control.jpg") no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  &__container {
+    position: relative;
+    width: 100%;
+    max-width: px-to-rem(580);
+    height: 100%;
+    padding: px-to-rem(55) px-to-rem(165) px-to-rem(55) 0;
+    text-align: left;
+  }
+
+  &__title {
+    color: #ffffff;
+    font-family: $frutiger-arabic-black;
+  }
+
+  &__text {
+    color: #ffffff;
+    font-size: px-to-rem(18);
+    margin-top: px-to-rem(16);
+  }
+
+  &__image {
+    position: absolute;
+    top: px-to-rem(86);
+    right: px-to-rem(64);
+    width: px-to-rem(156);
+    height: px-to-rem(156);
+  }
+
+  &__image-item {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+  }
+}

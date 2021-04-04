@@ -1,0 +1,14 @@
+@import "utility/mixins";
+
+.ricoh-h1 {
+  font-weight: 800;
+  font-size: px-to-rem(48);
+  line-height: 140%;
+}
+
+.ricoh-text {
+  color: #303233;
+  font-weight: 400;
+  font-size: px-to-rem(18);
+  line-height: 140%;
+}
