@@ -14,7 +14,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #303233;
   margin: 6.35% auto px-to-rem(33);
   will-change: margin;
   transition: margin 0.5s ease;
@@ -46,7 +45,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     @include ctx_tablet(portrait) {
       display: none;
@@ -75,8 +74,8 @@
         color: #999999;
 
         &:hover {
-          animation: menuItemHoverAnimation 0.5s ease-in-out;
-          color: $secondary-blue;
+          //animation: navItemHoverAnimation 0.5s ease-in-out;
+          color: $prime-color;
         }
       }
     }
@@ -105,13 +104,19 @@
     justify-content: center;
     font-size: px-to-rem(14);
     line-height: px-to-rem(16);
-    padding: px-to-rem(10) 15.7% px-to-rem(10) 0;
+    padding: px-to-rem(17) px-to-rem(30);
     text-transform: capitalize;
     transition: color 0.3s ease-in-out;
     white-space: nowrap;
 
+    &:first-child {
+      padding-right: px-to-rem(50);
+      padding-left: 0;
+    }
+
     &:last-child {
       padding-right: 0;
+      padding-left: px-to-rem(50);
     }
 
     &::after {
@@ -121,7 +126,7 @@
       left: 0;
       height: px-to-rem(2);
       content: "";
-      background-color: $secondary-blue;
+      background-color: $prime-color;
       border-radius: px-to-rem(5);
       opacity: 0;
       transform: translateY(5px);
@@ -130,7 +135,7 @@
 
     &:hover {
       &::after {
-        animation: menuItemUnderlineHoverAnimation 0.3s linear forwards;
+        //animation: navItemUnderlineHoverAnimation 0.3s linear forwards;
       }
     }
 
@@ -239,21 +244,7 @@
   }
 }
 /* stylelint-enable */
-@keyframes menuShowAnimation {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
-    visibility: hidden;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-  }
-}
-
-@keyframes menuItemHoverAnimation {
+@keyframes navItemHoverAnimation {
   0% {
     background-color: rgba(150, 150, 150, 0);
   }
@@ -267,7 +258,7 @@
   }
 }
 
-@keyframes menuItemUnderlineHoverAnimation {
+@keyframes navItemUnderlineHoverAnimation {
   0% {
     opacity: 0;
     transform: translateY(px-to-rem(5));
