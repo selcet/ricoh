@@ -3,73 +3,10 @@
 .ricoh-app-title {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: space-between;
 
-  &__counter {
-    width: px-to-rem(42);
-    height: px-to-rem(42);
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: $prime-color;
-
-    @include ctx_mobile {
-      width: px-to-rem(35, $font-size-mobile);
-      height: px-to-rem(35, $font-size-mobile);
-    }
-  }
-
-  &__number {
-    display: flex;
-    align-items: center;
-  }
-
-  &__value {
-    position: relative;
-    color: #ffffff;
-    font-family: BebasNeue, sans-serif;
-    font-size: px-to-rem(18);
-    line-height: px-to-rem(18);
-    padding-right: px-to-rem(7);
-
-    &::after {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: px-to-rem(1);
-      background-color: #ffffff;
-      content: "";
-    }
-
-    @include ctx_mobile {
-      font-size: px-to-rem(18, $font-size-mobile);
-      line-height: px-to-rem(18, $font-size-mobile);
-
-      &::after {
-        height: px-to-rem(1, $font-size-mobile);
-      }
-    }
-  }
-
-  &__caption {
-    font-family: $frutiger-arabic-roman;
-    font-size: px-to-rem(20);
-    margin-left: px-to-rem(15);
-
-    @include ctx_mobile {
-      font-size: px-to-rem(17, $font-size-mobile);
-    }
-  }
-
-  &__text {
-    font-family: $frutiger-arabic-bold;
-    font-size: px-to-rem(35);
-    margin-top: px-to-rem(20);
-    text-transform: uppercase;
-
-    @include ctx_mobile {
-      font-size: px-to-rem(21, $font-size-mobile);
-    }
+  &__title {
+    color: $secondary-grey;
+    font-family: $frutiger-arabic-black;
   }
 }

@@ -1,0 +1,23 @@
+.product {
+  margin-top: 5rem;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    margin-top: px-to-rem(40);
+  }
+
+  &__item-image {
+    &_green-bg {
+      background-color: rgba(16, 194, 92, 0.1);
+    }
+
+    &_blue-bg {
+      background-color: rgba(58, 147, 229, 0.1);
+    }
+  }
+}

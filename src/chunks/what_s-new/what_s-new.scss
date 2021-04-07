@@ -4,17 +4,6 @@
   background-color: #ffffff;
   margin-top: px-to-rem(80);
 
-  &__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__title {
-    color: $secondary-grey;
-    font-family: $frutiger-arabic-black;
-  }
-
   &__content {
     display: flex;
     justify-content: space-between;
