@@ -1,5 +1,7 @@
 # ☁︎ RECOH portal
 
+![Alt text](src/assets/readme-cover.jpg?raw=true "Cover")
+
 ## 🌟 Features
 
 - Write SCSS and modern JavaScript code in `src` and build minified, transpiled code for production in `dist`
