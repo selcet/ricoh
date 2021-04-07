@@ -21,6 +21,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &_green-bg {
+      background-color: rgba(16, 194, 92, 0.1);
+    }
+
+    &_blue-bg {
+      background-color: rgba(58, 147, 229, 0.1);
+    }
+
+    &_grey-bg {
+      background-color: rgba(48, 50, 51, 0.1);
+    }
+
+    &_red-bg {
+      background-color: rgba(204, 23, 43, 0.1);
+    }
   }
 
   &__image-icon {
