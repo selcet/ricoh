@@ -1,10 +1,11 @@
 import animateScrollTo from 'animated-scroll-to';
 
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-const header$ = document.querySelector('.header');
+const header$ = document.querySelector('.js_header');
+const headerToggleClass = 'js_header_active';
 
 const toggleMenu = () => {
-  const header = document.querySelector('.js_header');
+  const header = header$;
   const documentBody = document.getElementsByTagName('body')[0];
 
   header.classList.toggle('header_opened');
@@ -74,11 +75,11 @@ window.addEventListener(
     scrollingTimeoutRef = setTimeout(() => {
       console.log('Scrolling has stopped.');
       if (document.body.getBoundingClientRect().top < 0) {
-        header$.style.margin = '0';
+        header$.classList.add(headerToggleClass);
       } else {
-        header$.style.removeProperty('margin');
+        header$.classList.remove(headerToggleClass);
       }
-    }, 100);
+    }, 5);
   },
   false,
 );
