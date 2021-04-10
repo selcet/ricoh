@@ -44,6 +44,52 @@
     justify-content: center;
     margin-left: px-to-rem(15);
 
+    & > li {
+      position: relative;
+      font-family: $frutiger-arabic-roman;
+      color: #999999;
+      cursor: pointer;
+      font-size: px-to-rem(14);
+      line-height: px-to-rem(16);
+      padding: px-to-rem(10) px-to-rem(26);
+      transition: color 0.3s ease-in-out;
+      white-space: nowrap;
+
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: px-to-rem(2);
+        content: "";
+        background-color: $prime-color;
+        border-radius: px-to-rem(5);
+        opacity: 0;
+        transform: translateY(5px);
+        visibility: hidden;
+      }
+
+      &:hover {
+        &::after {
+          animation: menuItemUnderlineHoverAnimation 0.3s linear forwards;
+        }
+      }
+
+      @include ctx_mobile {
+        width: 70%;
+        color: #f1f1f1;
+        font-size: px-to-rem(17, $font-size-mobile);
+        margin-bottom: 3rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        transform: translateY(-100%);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
     @include ctx_tablet(portrait) {
       display: none;
     }
@@ -88,52 +134,6 @@
 
       @include ctx_mobile {
         @include mobile_menu();
-      }
-    }
-  }
-
-  &__menu-item {
-    position: relative;
-    font-family: $frutiger-arabic-roman;
-    color: #999999;
-    cursor: pointer;
-    font-size: px-to-rem(14);
-    line-height: px-to-rem(16);
-    padding: px-to-rem(10) px-to-rem(26);
-    transition: color 0.3s ease-in-out;
-    white-space: nowrap;
-
-    &::after {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      height: px-to-rem(2);
-      content: "";
-      background-color: $prime-color;
-      border-radius: px-to-rem(5);
-      opacity: 0;
-      transform: translateY(5px);
-      visibility: hidden;
-    }
-
-    &:hover {
-      &::after {
-        animation: menuItemUnderlineHoverAnimation 0.3s linear forwards;
-      }
-    }
-
-    @include ctx_mobile {
-      width: 70%;
-      color: #f1f1f1;
-      font-size: px-to-rem(17, $font-size-mobile);
-      margin-bottom: 3rem;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      transform: translateY(-100%);
-
-      &:last-child {
-        margin-bottom: 0;
       }
     }
   }
