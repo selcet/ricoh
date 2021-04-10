@@ -2,10 +2,12 @@
 /* stylelint-disable no-descending-specificity */
 
 @mixin mobile_menu {
-  position: fixed;
+  width: px-to-rem(40, $font-size-mobile);
+  height: px-to-rem(40, $font-size-mobile);
+  border: px-to-rem(1, $font-size-mobile) solid #c8c8c8;
   display: flex;
-  top: 1em;
-  z-index: 1;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
@@ -15,27 +17,10 @@
   will-change: margin;
   transition: margin 0.5s ease;
 
-  @include ctx_tablet(portrait) {
-    justify-content: flex-end;
-  }
-
-  @include ctx_mobile {
-    justify-content: flex-end;
-    margin: px-to-rem(15, $font-size-mobile) 0;
-  }
-
   &__logo {
     display: flex;
     min-width: px-to-rem(116);
     width: px-to-rem(143);
-
-    @include ctx_tablet(portrait) {
-      margin-right: auto;
-    }
-
-    @include ctx_mobile {
-      margin-right: auto;
-    }
   }
 
   &__menu-list {
@@ -99,14 +84,14 @@
       top: 0;
       left: 0;
       z-index: 2;
-      width: 100%;
-      height: 100%;
+      width: 102%;
+      height: 102%;
       background: rgba(0, 0, 0, 0.9);
       display: flex;
       flex-direction: column;
       margin-left: 0;
       opacity: 0;
-      transform: translateY(-100%);
+      transform: translateX(100%);
       transition: all 0.3s ease-in-out;
       visibility: hidden;
       pointer-events: none;
@@ -124,68 +109,29 @@
     }
   }
 
-  &__menu-button {
-    &_mobile {
-      display: none;
+  &__menu-button_mobile {
+    display: none;
 
-      @include ctx_tablet(portrait) {
-        @include mobile_menu();
-      }
-
-      @include ctx_mobile {
-        @include mobile_menu();
-      }
+    @include ctx_mobile {
+      @include mobile_menu();
     }
   }
 
-  .hamburger {
-    position: relative;
-    display: inline-block;
-    width: px-to-rem(20, $font-size-mobile);
-    height: px-to-rem(20, $font-size-mobile);
+  &__menu-button-menu,
+  &__menu-button-user {
+    display: none;
 
-    &__inner {
-      top: 50%;
+    @include ctx_mobile {
+      width: px-to-rem(18, $font-size-mobile);
+      height: px-to-rem(18, $font-size-mobile);
       display: block;
-      margin-top: -(px-to-rem(2, $font-size-mobile));
-      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-      transition-duration: 75ms;
-
-      &,
-      &::after,
-      &::before {
-        position: absolute;
-        width: px-to-rem(20, $font-size-mobile);
-        height: px-to-rem(4, $font-size-mobile);
-        transition-timing-function: ease;
-        transition-duration: 0.15s;
-        transition-property: transform;
-        border-radius: px-to-rem(4, $font-size-mobile);
-        background-color: $prime-color;
-      }
-
-      &::after,
-      &::before {
-        display: block;
-        content: "";
-      }
-
-      &::before {
-        top: -(px-to-rem(7, $font-size-mobile));
-        transition: top 75ms ease 0.12s, opacity 75ms ease;
-      }
-
-      &::after {
-        bottom: -(px-to-rem(7, $font-size-mobile));
-        transition: bottom 75ms ease 0.12s, transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-      }
     }
   }
 
   &_opened {
     .header__menu-list {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateX(0);
       visibility: visible;
       pointer-events: all;
     }
@@ -198,27 +144,9 @@
 
     .header__menu-button {
       position: fixed;
-      top: px-to-rem(20, $font-size-mobile);
-      right: 4%;
+      top: px-to-rem(15, $font-size-mobile);
+      right: px-to-rem(15, $font-size-mobile);
       z-index: 2;
-    }
-
-    .hamburger__inner {
-      transition-delay: 0.12s;
-      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      transform: rotate(45deg);
-    }
-
-    .hamburger__inner::before {
-      top: 0;
-      transition: top 75ms ease, opacity 75ms ease 0.12s;
-      opacity: 0;
-    }
-
-    .hamburger__inner::after {
-      bottom: 0;
-      transition: bottom 75ms ease, transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
-      transform: rotate(-90deg);
     }
   }
 }

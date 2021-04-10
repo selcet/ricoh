@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 7% auto 0;
+  margin: px-to-rem(118) auto 0;
   will-change: margin;
   transition: margin 0.5s ease;
 
