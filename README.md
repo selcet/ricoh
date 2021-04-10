@@ -1,6 +1,6 @@
 # ☁︎ RECOH portal
 
-![Alt text](src/assets/readme-cover.jpg?raw=true "Cover")
+![Alt text](src/assets/readme-cover.png?raw=true "Cover")
 
 ## 🌟 Features
 
