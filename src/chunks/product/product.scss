@@ -1,13 +1,38 @@
+@import "../../styles/utility/mixins";
+
 .product {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   margin-top: 5rem;
+
+  &__button {
+    display: inline-flex;
+    margin-left: auto;
+
+    @include ctx_mobile(portrait) {
+      width: 100%;
+      margin-top: px-to-rem(20, $font-size-mobile);
+      margin-left: initial;
+      order: 2;
+    }
+  }
 
   &__content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include ctx_mobile {
+      justify-content: center;
+    }
   }
 
   &__item {
     margin-top: px-to-rem(40);
+
+    @include ctx_mobile(portrait) {
+      margin-top: px-to-rem(15, $font-size-mobile);
+    }
   }
 }

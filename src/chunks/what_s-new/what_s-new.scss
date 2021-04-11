@@ -1,13 +1,33 @@
 @import "../../styles/utility/mixins";
 
 .what_s-new {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   background-color: #ffffff;
   margin-top: px-to-rem(80);
 
+  &__button {
+    display: inline-flex;
+    margin-left: auto;
+
+    @include ctx_mobile(portrait) {
+      width: 100%;
+      margin-top: px-to-rem(20, $font-size-mobile);
+      margin-left: initial;
+      order: 2;
+    }
+  }
+
   &__content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: px-to-rem(40);
+
+    @include ctx_mobile(portrait) {
+      margin-top: 0;
+    }
   }
 
   &__item {
@@ -19,6 +39,11 @@
     &:hover {
       background-color: #f2f2f2;
       border-color: #f2f2f2;
+    }
+
+    @include ctx_mobile(portrait) {
+      width: 100%;
+      margin-top: px-to-rem(15, $font-size-mobile);
     }
   }
 

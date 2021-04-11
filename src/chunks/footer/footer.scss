@@ -107,7 +107,7 @@
       }
     }
 
-    @include ctx_mobile {
+    @include ctx_mobile(portrait) {
       margin-top: px-to-rem(15, $font-size-mobile);
       margin-right: auto;
     }

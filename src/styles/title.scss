@@ -1,12 +1,6 @@
 @import "utility/mixins";
 
 .ricoh-app-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  &__title {
-    color: $secondary-grey;
-    font-family: $frutiger-arabic-black;
-  }
+  color: $secondary-grey;
+  font-family: $frutiger-arabic-black;
 }

@@ -1,3 +1,20 @@
+@import "../../styles/utility/mixins";
+
 .resources {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   margin-top: 5rem;
+
+  &__button {
+    display: inline-flex;
+    margin-left: auto;
+
+    @include ctx_mobile(portrait) {
+      width: 100%;
+      margin-top: px-to-rem(20, $font-size-mobile);
+      margin-left: initial;
+      order: 2;
+    }
+  }
 }
