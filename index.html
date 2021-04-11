@@ -20,33 +20,41 @@
   <!-- Font CDN -->
   <link href="//db.onlinewebfonts.com/c/4d12bb5288f3fdd9ba9a39ba39562d21?family=FrutigerLTArabic-77BlackCn" rel="stylesheet" type="text/css">
 
-  <link rel="icon" type="image/ico" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="web-manifestcon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="web-manifestcon-32x32.png">
-  <link rel="manifest" href="web-manifestanifest.json">
+  <link rel="icon" type="image/ico" href="./favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="./web-manifest/icon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./web-manifest/icon-32x32.png">
+  <link rel="manifest" href="./web-manifest/manifest.json">
 <link href="main.css" rel="stylesheet"></head>
 
 <body>
   <div class="application" id="app">
     <div class="application__header js_header" do-include-html="./header.html">
       <header class="header container">
+  <div class="header__menu-button header__menu-button_mobile js_menu-button">
+    <svg class="header__menu-button-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+      <path fill="#303233" d="M1.5 9C1.5 8.58579 1.83579 8.25 2.25 8.25H15.75C16.1642 8.25 16.5 8.58579 16.5 9C16.5 9.41421 16.1642 9.75 15.75 9.75H2.25C1.83579 9.75 1.5 9.41421 1.5 9Z"/>
+      <path fill="#303233" d="M1.5 4.5C1.5 4.08579 1.83579 3.75 2.25 3.75H15.75C16.1642 3.75 16.5 4.08579 16.5 4.5C16.5 4.91421 16.1642 5.25 15.75 5.25H2.25C1.83579 5.25 1.5 4.91421 1.5 4.5Z"/>
+      <path fill="#303233" d="M1.5 13.5C1.5 13.0858 1.83579 12.75 2.25 12.75H15.75C16.1642 12.75 16.5 13.0858 16.5 13.5C16.5 13.9142 16.1642 14.25 15.75 14.25H2.25C1.83579 14.25 1.5 13.9142 1.5 13.5Z"/>
+    </svg>
+
+  </div>
+
   <a href="/" class="header__logo">
     <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDIuMzkgNDguNjIiPjxwYXRoIGQ9Ik03MC42OSAxOS4xbDIuMjYgM2EyMS4zIDIxLjMgMCAwMS0xMC43IDIuNDhjLTkuNTYuMDItMTYuNTYtNC41NC0xNi41Ni0xMi4yOCAwLTcuNzMgNy0xMi4yOSAxNi41OS0xMi4yOWEyMy44MSAyMy44MSAwIDAxMTAuNDcgMmwtMi4zIDMuNDhhMTQuMjIgMTQuMjIgMCAwMC03LjEyLTEuNTVjLTYgMC05LjYxIDMuNTQtOS42MSA4LjMzczMuNiA4LjMzIDkuNjEgOC4zM2ExNyAxNyAwIDAwNy4zNi0xLjV6bTM1LjU2LTYuOGMwIDcuNzQtNi43IDEyLjMtMTYgMTIuM3MtMTYtNC41Ni0xNi0xMi4zUzgxLjAyIDAgOTAuMyAwczE1Ljk4IDQuNTYgMTUuOTggMTIuM3ptLTggMGMtLjAyLTQuNjktMi44NS04LjQ5LTcuOTUtOC40OXMtNy45MiAzLjc5LTcuOTIgOC40OCAyLjgxIDguNTIgNy45MiA4LjUyIDcuOTMtMy44MiA3LjkzLTguNTF6TTEzMC40LjYydjguOTFoLTExLjcxVi42MmgtNy42NXYyMy4zNWg3LjY1di05Ljg5aDExLjcydjkuODloNy42N1YuNjJ6TTMyLjk0IDIzLjk3aDguMDhWLjYyaC04LjA4ek0xNy44IDEzLjgxYzQuMTctLjE3IDguODItMS44MyA4LjgyLTYuNTYgMC02LjA2LTYuNTctNy4xOC0xMy4yMS03LjE4QzcuOTkuMDcgMi45OS4zMiAwIC41NnYyMy40MWg3LjU0VjQuMDlhNDcuNiA0Ny42IDAgMDE1LjkxLS4yOGMzLjg4IDAgNS44NSAxLjI2IDUuODUgMy40NyAwIDEuODktLjgyIDQuMTUtOS41MyA0LjA2djIuMjRhNTkuNiA1OS42IDAgMDExMC41MSAxMC4zOWg5LjA1QTU4LjA4IDU4LjA4IDAgMDAxNy44IDEzLjgxeiIgZmlsbD0iI2RhMTc0NSIvPjxwYXRoIGQ9Ik0uNiAzNC44MWgxLjkzdjkuNUguNnptMC0yaDEuOTN2LTEuODNILjZ6bTE1LjI4IDEuNzdhMy4yMiAzLjIyIDAgMDAtMyAxLjk0IDIuNzcgMi43NyAwIDAwLTIuODItMS45NCAzLjE0IDMuMTQgMCAwMC0yLjk0IDEuODJsLS4wMi0xLjU5SDUuMjljLjA3LjczLjA5IDEuNDcuMDkgMi4xOXY3LjMxaDEuOTN2LTUuMTljMC0xLjQ3LjU4LTMgMi4xNi0zIDEuMzUgMCAxLjcyLjk1IDEuNzIgMi4xMnY2LjA3aDEuOTN2LTUuMTljMC0xLjQ3LjU1LTMgMi4xNC0zIDEuMzUgMCAxLjcxLjk1IDEuNzEgMi4xMnY2LjA3aDEuOTV2LTYuMzRjMC0xLjk3LS45NS0zLjM3LTMuMDQtMy4zN3ptOTAgNy41OWExNi44OSAxNi44OSAwIDAwLjExIDIuMTJoLTEuODlsLS4xMS0xLjQ4Yy0xLjM4IDIuNTQtNi4yMyAyLjI3LTYuMjMtMSAwLTIuNDcgMi40LTMuNDkgNi4xNy0zLjMxIDAgMCAuMjEtMS43OS0xLTIuMzRhNSA1IDAgMDAtNCAuNTVsLS4xMi0xLjQ2YzIuMjUtLjkyIDctMS40OSA3IDIuOTJ6bS0xLjktMi41NXMtNC4zNy0uMzUtNC4yNiAyLjA1Yy4wNyAxLjQgMS40NCAxLjY2IDIuNDkgMS40MSAxLjM3LS4yNyAxLjc4LTEuNzIgMS43Mi0zLjQ0em0tNzUgMi41NWExNi44OSAxNi44OSAwIDAwLjExIDIuMTJoLTEuOTVsLS4wNi0xLjQ4Yy0xLjM4IDIuNTQtNi4yMyAyLjI3LTYuMjMtMSAwLTIuNDcgMi40LTMuNDkgNi4xNy0zLjMxIDAgMCAuMjEtMS43OS0xLTIuMzRhNSA1IDAgMDAtNCAuNTVsLS4xMi0xLjQ2YzIuMjUtLjkyIDcuMDUtMS40OSA3LjA1IDIuOTJ6bS0xLjktMi41NXMtNC4zNy0uMzUtNC4yNiAyLjA1Yy4wNyAxLjQgMS40NCAxLjY2IDIuNDkgMS40MSAxLjM4LS4yNyAxLjc3LTEuNzIgMS43MS0zLjQ0em05OC42MS00LjgxaDEuODV2OWMwIDUuMy00Ljc4IDUuMzQtOC4wNiA0LjM0bC4xMi0xLjYyYTYuMiA2LjIgMCAwMDIuODcuNjljMy4zNCAwIDMuMTQtMi43OSAzLjE0LTQuNTNhMy42MyAzLjYzIDAgMDEtMyAxLjY2Yy0yLjgxIDAtMy45MS0yLjQyLTMuOTEtNC44IDAtMi41MyAxLjEtNC45MiA0LTQuOTJhMy4yMSAzLjIxIDAgMDEzIDEuNzh6bTAgNC43NGMwLTEuNTMtLjU4LTMuNDctMi40NS0zLjQ3cy0yLjQzIDEuODctMi40MyAzLjQ3LjQ3IDMuMzEgMi40MSAzLjMxIDIuNC0xLjg5IDIuNC0zLjMzem0tODcuNzQtNC43NGgxLjg1djljMCA1LjMtNC43OCA1LjM0LTguMDcgNC4zNGwuMTItMS42MmE2LjIzIDYuMjMgMCAwMDIuODcuNjljMy4zNCAwIDMuMTUtMi43OSAzLjE1LTQuNTNhMy42NSAzLjY1IDAgMDEtMyAxLjY2Yy0yLjgyIDAtMy45Mi0yLjQyLTMuOTItNC44IDAtMi41MyAxLjEtNC45MiA0LTQuOTJhMy4yMSAzLjIxIDAgMDEzIDEuNzh6bTAgNC43NGMwLTEuNTMtLjU3LTMuNDctMi40NC0zLjQ3cy0yLjQzIDEuODctMi40MyAzLjQ3LjQzIDMuMjYgMi4zOCAzLjI2IDIuNDYtMS44NCAyLjQ2LTMuMjh6bTQuNzQgNC43NmgxLjkzdi05LjVoLTEuOTN6bTAtMTEuNWgxLjkzdi0xLjgzaC0xLjkzem05NS4zIDcuMjFoLTYuNDFjLjExIDMuMzUgMy4xMSAzLjc5IDUuNzUgMi40OWwuMTIgMS40OWMtMy44OCAxLjI0LTcuODkuNTEtNy44OS00LjQ5IDAtMi42MSAxLjY4LTQuOTEgNC4zNi00LjkxIDQuNTQgMCA0LjAzIDUuNDQgNC4wMyA1LjQ0em0tMS44NS0xLjE4YzAtMS4zNS0uNTItMi45NS0yLjE2LTIuOTVzLTIuNDIgMS43My0yLjQyIDIuOTV6bS03MCAxLjE4aC02LjQ1Yy4xMSAzLjMzIDMuMTIgMy43NCA1Ljc5IDIuNDdsLjEyIDEuNDljLTMuOTEgMS4yNi03LjkxLjUzLTcuOTEtNC40NyAwLTIuNjEgMS42OC00LjkxIDQuMzctNC45MSA0LjUzIDAgNC4wMiA1LjQ0IDQuMDIgNS40NHptLTEuODYtMS4xOGMwLTEuMzUtLjUxLTIuOTUtMi4xNi0yLjk1cy0yLjQzIDEuNzUtMi40MyAyLjk3em00LjIzIDUuNDRoMi4wN3YtMmgtMi4xM3ptMTYuNjgtNy43OGwuMTEtMS41MmMtMy42OC0xLjIyLTcuOTEuMTgtNy45MSA0LjUxIDAgNC44NiA0Ljg2IDUuNjUgNy45MSA0LjYybC0uMS0xLjVjLTIuNTggMS4xMi01LjczLjE4LTUuNzMtMy4xMnMzLjIyLTQuMDkgNS42Ni0yLjk3em03LjM4LTEuOTJhMy4xNCAzLjE0IDAgMDAtMyAxLjc3di01LjM3aC0xLjk4VjQ0LjNoMS45M3YtNWMwLTEuNDguNTgtMy4yNCAyLjM1LTMuMjRzMS45MiAxLjI1IDEuOTIgMi42MXY1LjYxaDEuOXYtNmMwLTIuMTYtLjg3LTMuNjgtMy4xOC0zLjY4em0yMC44NCAwYTMuMzUgMy4zNSAwIDAwLTMuMTIgMS44MmwtLjEyLTEuNTloLTEuODJhMjAuMTggMjAuMTggMCAwMS4xIDIuMTl2Ny4zMWgxLjkzVjM5LjJjMC0xLjUxLjU2LTMuMTIgMi4zNS0zLjEyczEuOTYgMS4yOCAxLjk2IDIuNjF2NS42Mmgydi02Yy0uMS0yLjIxLS45NS0zLjcxLTMuMzQtMy43MXptLTYxIDBhMy4zNyAzLjM3IDAgMDAtMy4xMyAxLjgybC0uMDgtMS41OWgtMS44MmEyMC4xOCAyMC4xOCAwIDAxLjEgMi4xOXY3LjMxaDEuOTNWMzkuMmMwLTEuNTEuNTYtMy4xMiAyLjM1LTMuMTJzMS45MyAxLjI4IDEuOTMgMi42MXY1LjYyaDJ2LTZjLS4wNy0yLjIxLS45Mi0zLjcxLTMuMzEtMy43MXptODcuOTQgNy43NHYyaDIuMDZ2LTJ6IiBmaWxsPSIjNjU2MjYzIi8+PC9zdmc+" alt="logotype">
   </a>
 
-    <div class="header__menu-list menu-handler">
-      <div class="header__menu-item" data-id="home">Back to RICOH</div>
-      <div class="header__menu-item" data-id="about">Logout</div>
-    </div>
+  <ul class="header__menu-list menu-handler">
+    <li data-id="home">Back to RICOH</li>
+    <li data-id="about">Logout</li>
+  </ul>
 
-    <div class="header__menu-button header__menu-button_mobile js_menu-button">
-  <!--    <img src="./assets/header/icon-menu.svg" alt="menu"/>-->
-      <div class="hamburger">
-        <div class="hamburger__inner"></div>
-      </div>
-    </div>
-  </header></div>
-
+  <div class="header__menu-button header__menu-button_mobile js_menu-button">
+    <svg class="header__menu-button-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+      <path fill="#303233" d="M3.34835 11.5984C4.05161 10.8951 5.00544 10.5 6 10.5H12C12.9946 10.5 13.9484 10.8951 14.6517 11.5984C15.3549 12.3016 15.75 13.2554 15.75 14.25V15.75C15.75 16.1642 15.4142 16.5 15 16.5C14.5858 16.5 14.25 16.1642 14.25 15.75V14.25C14.25 13.6533 14.0129 13.081 13.591 12.659C13.169 12.2371 12.5967 12 12 12H6C5.40326 12 4.83097 12.2371 4.40901 12.659C3.98705 13.081 3.75 13.6533 3.75 14.25V15.75C3.75 16.1642 3.41421 16.5 3 16.5C2.58579 16.5 2.25 16.1642 2.25 15.75V14.25C2.25 13.2554 2.64509 12.3016 3.34835 11.5984Z"/>
+      <path fill="#303233" d="M9 3C7.75736 3 6.75 4.00736 6.75 5.25C6.75 6.49264 7.75736 7.5 9 7.5C10.2426 7.5 11.25 6.49264 11.25 5.25C11.25 4.00736 10.2426 3 9 3ZM5.25 5.25C5.25 3.17893 6.92893 1.5 9 1.5C11.0711 1.5 12.75 3.17893 12.75 5.25C12.75 7.32107 11.0711 9 9 9C6.92893 9 5.25 7.32107 5.25 5.25Z"/>
+    </svg>
+  </div>
+</header>
 
     </div>
     <div class="application__navigation" do-include-html="./navigation.html">
@@ -71,7 +79,14 @@
 
     </div>
     <div class="application__top-banner" do-include-html="./top-banner.html">
-      <section class="top-banner">
+      <style>
+  .top-banner_right {
+     background: url("chunks/top-banner/img/technician-touch-control.jpg") no-repeat center;
+     background-size: cover;
+  }
+</style>
+
+<section class="top-banner">
   <div class="top-banner__part top-banner__part_left">
     <div class="top-banner__container">
       <h2 class="top-banner__title ricoh-h2">WELCOME TO THE PARTNER ZONE RICOH</h2>
@@ -82,7 +97,7 @@
       </div>
 
       <div class="top-banner__image">
-        <img class="top-banner__image-item" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0icmljb2gtZmlndXJlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTYgMTU2Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTU2IDBIMTQuMzd2MTM1LjQ3SDBWMTU2aDIwLjUzdi0xNC4zN0gxNTZWMHoiLz48L3N2Zz4=" title="figure">
+        <img class="top-banner__image-item" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTYgMTU2Ij48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMCAxNDEuNmgxMzUuNVYxNTZIMTU2di0yMC41aC0xNC40VjBIMHoiLz48L3N2Zz4=" title="figure">
       </div>
     </div>
   </div>
@@ -91,32 +106,12 @@
   </div>
 </section>
 
-<!--
-<section class="top-banner container" id="home">
-  <div class="top-banner__image-item">
-    <img class="top-banner__image" src="images/technician-touch-control-4346f51b0244154bc1106dd5ba7129da.jpg"/>
-  </div>
-
-  <div class="top-banner__content">
-    <div class="top-banner__number">01</div>
-
-    <div class="top-banner__title">
-      WE ARE<br/>
-      it engineering company
-    </div>
-
-    <div class="top-banner__text">progressive and open minded</div>
-  </div>
-</section>
--->
-
     </div>
     <div class="application__what_s-new" do-include-html="./what_s-new.html">
       <section class="what_s-new container">
-    <div class="what_s-new__header ricoh-app-title">
-        <div class="ricoh-app-title__title ricoh-h2">What's new</div>
-        <div class="ricoh-button ricoh-button_view-more">View more</div>
-    </div>
+    <div class="what_s-new__title ricoh-app-title ricoh-h2">What's new</div>
+
+    <div class="what_s-new__button ricoh-button ricoh-button_view-more">View more</div>
 
     <div class="what_s-new__content">
         <div class="what_s-new__item">
@@ -166,10 +161,9 @@
     </div>
     <div class="application__product" do-include-html="./product.html">
       <section class="product container">
-    <div class="product__header ricoh-app-title">
-        <div class="ricoh-app-title__title ricoh-h2">Product</div>
-        <div class="ricoh-button ricoh-button_view-more">View more</div>
-    </div>
+    <div class="product__title ricoh-app-title ricoh-h2">Product</div>
+
+    <div class="product__button ricoh-button ricoh-button_view-more">View more</div>
 
     <div class="product__content">
         <div class="product__item ricoh-app-text-item">
@@ -221,10 +215,9 @@
     </div>
     <div class="application__resources" do-include-html="./resources.html">
       <section class="resources container">
-    <div class="product__header ricoh-app-title">
-        <div class="ricoh-app-title__title ricoh-h2">Resources</div>
-        <div class="ricoh-button ricoh-button_view-more">View more</div>
-    </div>
+    <div class="resources__title ricoh-app-title ricoh-h2">Resources</div>
+
+    <div class="resources__button ricoh-button ricoh-button_view-more">View more</div>
 
     <div class="product__content">
         <div class="product__item ricoh-app-text-item">
@@ -274,12 +267,11 @@
 </section>
 
     </div>
-
     <div class="application__footer" do-include-html="./footer.html">
       <footer class="footer">
   <div class="footer__container container">
     <div class="footer__menu">
-      <div class="footer__menu-list menu-handler">
+      <div class="footer__menu-list">
         <a class="footer__menu-item">Contact</a>
         <a class="footer__menu-item">Privacy policy</a>
         <a class="footer__menu-item">Terms of use</a>
@@ -301,7 +293,7 @@
 </footer>
 
     </div>
-  
+  </div>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script type="text/javascript" src="main.js"></script></body>
 
