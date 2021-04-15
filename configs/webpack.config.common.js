@@ -35,7 +35,7 @@ module.exports = (mode) => {
           loader: 'babel-loader',
         },
         {
-          test: /\.(sass|scss)$/,
+          test: /\.s[ac]ss$/i,
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
@@ -51,7 +51,7 @@ module.exports = (mode) => {
           ],
         },
         {
-          test: /\.html$/,
+          test: /\.html$/i,
           use: {
             loader: 'html-loader',
             options: {
@@ -96,9 +96,19 @@ module.exports = (mode) => {
         },
       ]),
       new HtmlWebpackPlugin({
+        filename: 'index.html',
+        inject: true,
         template: './src/index.html',
+        chunks: ['main'],
         minify: isProd,
       }),
+      new HtmlWebpackPlugin({
+        filename: 'authorization.html',
+        inject: true,
+        template: 'src/authorization.html',
+        chunks: ['authorization'],
+        minify: isProd,
+      })
     ],
     stats: {
       colors: true,
