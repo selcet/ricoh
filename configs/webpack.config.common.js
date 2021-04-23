@@ -103,10 +103,10 @@ module.exports = (mode) => {
         minify: isProd,
       }),
       new HtmlWebpackPlugin({
-        filename: 'authorization.html',
+        filename: 'authorization-log-in.html',
         inject: true,
-        template: 'src/authorization.html',
-        chunks: ['authorization'],
+        template: 'src/authorization-log-in.html',
+        chunks: ['authorization-log-in'],
         minify: isProd,
       })
     ],

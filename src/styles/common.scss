@@ -17,6 +17,21 @@ body {
   text-align: left;
 }
 
+a {
+  text-decoration: none;
+  transition: color 200ms ease-in-out;
+
+  &:hover {
+    color: #cc172b;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+    text-decoration: underline;
+  }
+}
+
 .scroll-fixed {
   overflow: hidden;
 }

@@ -24,11 +24,32 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./web-manifest/icon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./web-manifest/icon-32x32.png">
   <link rel="manifest" href="./web-manifest/manifest.json">
+  <link href="main.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="application authorization">
-    some form
+    <div class="authorization__part authorization__part_left">
+      <div class="authorization__container">
+        <div class="authorization__header">
+          <a href="/" class="authorization__header-link">
+            <img class="authorization__header-logo" src="./assets/ricoh-logo.svg" alt="logotype"/>
+          </a>
+
+          <div class="authorization__header-text">
+            Partner Zone. Text that explains what kind of portal it is and what it is for in 2 words
+          </div>
+        </div>
+
+        <div class="authorization__content" do-include-html="./auth-log-in.html">
+          ${require('./chunks/auth-log-in/auth-log-in.html')}
+        </div>
+
+        <div class="authorization__footer">© Ricoh</div>
+      </div>
+    </div>
+
+    <div class="authorization__part authorization__part_right"></div>
   </div>
 </body>
 </html>

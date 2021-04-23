@@ -6,7 +6,8 @@
 @import "title";
 @import "text-item";
 @import "common";
-@import "../authorization";
+@import "../authorization-log-in";
+@import "../chunks/auth-log-in/auth-log-in";
 @import "../chunks/header/header";
 @import "../chunks/navigation/navigation";
 @import "../chunks/what_s-new/what_s-new";

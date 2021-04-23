@@ -16,6 +16,10 @@
     background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
 
+  @include ctx_mobile {
+    font-size: px-to-rem(18, $font-size-mobile);
+  }
+
   &:hover {
     background-color: rgba($prime-color, 0.1);
     border-color: lighten($prime-color, 30%) lighten($prime-color, 30%) $prime-color lighten($prime-color, 30%);
@@ -27,11 +31,7 @@
     color: #ffffff;
   }
 
-  &_transparent {
-    color: $prime-color;
-  }
-
-  &_view-more {
+  &_red {
     position: relative;
     min-width: px-to-rem(260);
     height: px-to-rem(50);
@@ -52,5 +52,13 @@
       background-color: #ba0f26;
       color: #ffffff;
     }
+
+    @include ctx_mobile {
+      height: px-to-rem(50, $font-size-mobile);
+    }
+  }
+
+  &_transparent {
+    color: $prime-color;
   }
 }
