@@ -9,6 +9,9 @@
 @import "../authorization";
 @import "../chunks/auth-log-in/auth-log-in";
 @import "../chunks/auth-reset-pass/auth-reset-pass";
+@import "../chunks/auth-reset-pass-check-email/auth-reset-pass-check-email";
+@import "../chunks/auth-reset-pass-change-pass/auth-reset-pass-change-pass";
+@import "../chunks/auth-reset-pass-success/auth-reset-pass-success";
 @import "../chunks/header/header";
 @import "../chunks/navigation/navigation";
 @import "../chunks/what_s-new/what_s-new";

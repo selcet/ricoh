@@ -115,6 +115,27 @@ module.exports = (mode) => {
         template: 'src/authorization-reset-pass.html',
         chunks: ['authorization-reset-pass'],
         minify: isProd,
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'authorization-reset-pass-check-email.html',
+        inject: true,
+        template: 'src/authorization-reset-pass-check-email.html',
+        chunks: ['authorization-reset-pass-check-email'],
+        minify: isProd,
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'authorization-reset-pass-change-pass.html',
+        inject: true,
+        template: 'src/authorization-reset-pass-change-pass.html',
+        chunks: ['authorization-reset-pass-change-pass'],
+        minify: isProd,
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'authorization-reset-pass-success.html',
+        inject: true,
+        template: 'src/authorization-reset-pass-success.html',
+        chunks: ['authorization-reset-pass-success'],
+        minify: isProd,
       })
     ],
     stats: {

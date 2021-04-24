@@ -16,11 +16,13 @@ $checkbox-size: 1.5em;
   height: px-to-rem(50);
   background-color: rgba(#ffffff, 0.5);
   border: px-to-rem(1) solid #c8c8c8;
+  font-size: px-to-rem(16);
   padding: px-to-rem(11) px-to-rem(16);
   transition: background-color 0.3s ease-in-out;
 
   @include ctx_mobile {
     height: px-to-rem(50, $font-size-mobile);
+    font-size: px-to-rem(16, $font-size-mobile);
   }
 
   &:hover,

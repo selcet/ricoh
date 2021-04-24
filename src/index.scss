@@ -13,10 +13,12 @@ body {
 }
 
 body {
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  line-height: 1.5;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
 }
 
 a:not([class]) {
@@ -91,10 +93,22 @@ select {
   justify-content: center;
 
   &__item {
-    margin-left: 10px;
+    color: #999999;
+    border-left: px-to-rem(1) solid #c8c8c8;
+    border-right: px-to-rem(1) solid #c8c8c8;
+    margin-left: px-to-rem(-1);
+    padding: 0 px-to-rem(15);
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  }
 
-    &:first-child {
-      margin-left: 0;
+  &:hover {
+    .top-links__item {
+      color: #c8c8c8;
+
+      &:hover {
+        background-color: #c8c8c8;
+        color: #cc172b;
+      }
     }
   }
 }

@@ -1,0 +1,54 @@
+.auth-reset-password-check-email {
+  width: 74.5834%;
+
+  @include ctx_mobile {
+    width: 100%;
+    padding: 5% 4%;
+  }
+
+  &__sub-title {
+    color: $secondary-grey;
+    font-size: px-to-rem(16);
+    font-family: $frutiger-arabic-bold;
+
+    @include ctx_mobile {
+      font-size: px-to-rem(16, $font-size-mobile);
+    }
+  }
+
+  &__text {
+    color: #2c4251;
+    font-size: px-to-rem(16);
+    margin-top: px-to-rem(16);
+
+    @include ctx_mobile {
+      font-size: px-to-rem(16, $font-size-mobile);
+      margin-top: px-to-rem(16, $font-size-mobile);
+    }
+  }
+
+  &__check-spam {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: px-to-rem(20);
+    text-align: center;
+  }
+
+  &__check-spam-link {
+    font-size: px-to-rem(14);
+    color: #2c4251;
+
+    @include ctx_mobile {
+      font-size: px-to-rem(14, $font-size-mobile);
+    }
+  }
+
+  &__button {
+    margin-top: px-to-rem(16);
+
+    @include ctx_mobile {
+      margin-bottom: px-to-rem(16, $font-size-mobile);
+    }
+  }
+}

@@ -3,6 +3,7 @@
 
   @include ctx_mobile {
     width: 100%;
+    padding: 5% 4%;
   }
 
   &__input {
@@ -32,9 +33,11 @@
 
   &__text {
     color: #2c4251;
+    font-size: px-to-rem(16);
     margin-bottom: px-to-rem(26);
 
     @include ctx_mobile {
+      font-size: px-to-rem(16, $font-size-mobile);
       margin-bottom: px-to-rem(26, $font-size-mobile);
     }
   }
