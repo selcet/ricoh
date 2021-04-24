@@ -99,6 +99,13 @@ select {
     margin-left: px-to-rem(-1);
     padding: 0 px-to-rem(15);
     transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+
+    @include ctx_mobile {
+      border-left-color: #000000;
+      border-right-color: #000000;
+      color: #cc172b;
+      padding: px-to-rem(5, $font-size-mobile) px-to-rem(11, $font-size-mobile);
+    }
   }
 
   &:hover {
@@ -110,5 +117,15 @@ select {
         color: #cc172b;
       }
     }
+  }
+
+  @include ctx_mobile {
+    position: fixed;
+    top: 7rem;
+    z-index: 5;
+    width: 100%;
+    background: rgba(117, 252, 0, 0.9);
+    color: #ffffff;
+    flex-wrap: wrap;
   }
 }
