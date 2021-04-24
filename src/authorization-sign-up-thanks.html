@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140821264-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-140821264-1');
+  </script>
+
+  <title>Ricoh Portal</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, minimum-scale=1, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="text/plain" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+  <!-- Font CDN -->
+  <link href="//db.onlinewebfonts.com/c/4d12bb5288f3fdd9ba9a39ba39562d21?family=FrutigerLTArabic-77BlackCn" rel="stylesheet" type="text/css"/>
+
+  <link rel="icon" type="image/ico" href="./favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="./web-manifest/icon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./web-manifest/icon-32x32.png">
+  <link rel="manifest" href="./web-manifest/manifest.json">
+  <link href="main.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="application authorization">
+  <div class="authorization__part authorization__part_left">
+    <div class="authorization__container">
+      <div class="authorization__header">
+        <a href="/" class="authorization__header-link">
+          <img class="authorization__header-logo" src="./assets/ricoh-logo.svg" alt="logotype"/>
+        </a>
+
+        <div class="authorization__header-text">
+          Partner Zone. Text that explains what kind of portal it is and what it is for in 2 words
+        </div>
+      </div>
+
+      <div class="authorization__content" do-include-html="./sign-up-thanks.html">
+        ${require('./chunks/sign-up-thanks/sign-up-thanks.html')}
+      </div>
+
+      <div class="authorization__footer">© Ricoh</div>
+    </div>
+  </div>
+
+  <div class="authorization__part authorization__part_right"></div>
+</div>
+</body>
+</html>

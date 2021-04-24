@@ -3,6 +3,8 @@
 @import "typography";
 @import "buttons";
 @import "input";
+@import "textarea";
+@import "select";
 @import "title";
 @import "text-item";
 @import "common";
@@ -12,6 +14,8 @@
 @import "../chunks/auth-reset-pass-check-email/auth-reset-pass-check-email";
 @import "../chunks/auth-reset-pass-change-pass/auth-reset-pass-change-pass";
 @import "../chunks/auth-reset-pass-success/auth-reset-pass-success";
+@import "../chunks/sign-up/sign-up";
+@import "../chunks/sign-up-thanks/sign-up-thanks";
 @import "../chunks/header/header";
 @import "../chunks/navigation/navigation";
 @import "../chunks/what_s-new/what_s-new";

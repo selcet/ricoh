@@ -68,6 +68,7 @@ $footer-height: px-to-rem(60);
 
     @include ctx_mobile {
       width: 100%;
+      max-width: px-to-rem(600, $font-size-mobile);
       padding: 0 4%;
     }
   }

@@ -1,0 +1,42 @@
+.ricoh-app-textarea {
+  width: 100%;
+  min-height: px-to-rem(120);
+  background-color: rgba(#ffffff, 0.5);
+  border: px-to-rem(1) solid #c8c8c8;
+  font-size: px-to-rem(16);
+  padding: px-to-rem(11) px-to-rem(16);
+  transition: background-color 0.3s ease-in-out;
+
+  @include ctx_mobile {
+    min-height: px-to-rem(120, $font-size-mobile);
+    font-size: px-to-rem(16, $font-size-mobile);
+  }
+
+  &:hover,
+  &:active {
+    background-color: rgba(#ffffff, 0.9);
+  }
+
+  &:focus {
+    background-color: rgba(#ffffff, 0.9);
+    border-color: #999999;
+    outline: none;
+  }
+
+  &__label {
+    color: $secondary-grey;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: px-to-rem(14);
+    margin-bottom: px-to-rem(12);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $prime-color;
+    }
+
+    @include ctx_mobile {
+      font-size: px-to-rem(14, $font-size-mobile);
+    }
+  }
+}
