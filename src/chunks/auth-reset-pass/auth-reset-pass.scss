@@ -1,0 +1,63 @@
+.auth-reset-password {
+  width: 74.5834%;
+
+  @include ctx_mobile {
+    width: 100%;
+  }
+
+  &__input {
+    @include ctx_mobile {
+      margin-top: px-to-rem(16, $font-size-mobile);
+    }
+  }
+
+  &__forget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: px-to-rem(20) 0;
+  }
+
+  &__lost-password {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__sign-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: px-to-rem(20);
+  }
+
+  &__text {
+    color: #2c4251;
+    margin-bottom: px-to-rem(26);
+
+    @include ctx_mobile {
+      margin-bottom: px-to-rem(26, $font-size-mobile);
+    }
+  }
+
+  &__button {
+    margin-top: px-to-rem(16);
+
+    @include ctx_mobile {
+      margin-bottom: px-to-rem(16, $font-size-mobile);
+    }
+  }
+
+  &__sign-up-link {
+    font-size: px-to-rem(14);
+    color: #2c4251;
+
+    @include ctx_mobile {
+      font-size: px-to-rem(14, $font-size-mobile);
+    }
+  }
+
+  &__sing-up-bold {
+    font-family: $frutiger-arabic-bold;
+    padding-left: px-to-rem(10);
+  }
+}
