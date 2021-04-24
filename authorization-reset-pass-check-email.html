@@ -41,40 +41,24 @@
           </div>
         </div>
 
-        <div class="authorization__content" do-include-html="./auth-log-in.html">
-          <section class="auth-log-in container">
-  <div class="authorization__title">Log in <span class="authorization__title_grey">Partner Zone</span></div>
+        <div class="authorization__content" do-include-html="./auth-reset-pass-check-email.html">
+          <section class="auth-reset-password-check-email container">
+  <div class="authorization__title">Reset your <span class="authorization__title_grey">Password</span></div>
 
-  <div class="auth-log-in__input">
-    <label class="ricoh-app-input__label" for="auth-log-in-input-email">Username or E-mail</label>
-    <input class="ricoh-app-input" id="auth-log-in-input-email" placeholder="Example@gmail.com" type="email">
+  <div class="auth-reset-password-check-email__sub-title">
+    Check your mail
   </div>
 
-  <div class="auth-log-in__input">
-    <label class="ricoh-app-input__label" for="auth-log-in-input-password">Password</label>
-    <input class="ricoh-app-input" id="auth-log-in-input-password" placeholder="Enter password" type="password">
+  <div class="auth-reset-password-check-email__text">
+    We have sent a password recover instructions to your email.
   </div>
 
-  <div class="auth-log-in__forget">
-    <div class="auth-log-in__forget-remember">
-      <div class="ricoh-app-input-checkbox">
-          <input class="ricoh-app-input" type="checkbox" id="pretty-checkbox">
-          <div class="ricoh-app-input-checkbox-mark"></div>
-          <label class="ricoh-app-input-checkbox-label authorization__link" for="pretty-checkbox">Remember me</label>
-      </div>
-    </div>
-
-    <div class="auth-log-in__lost-password">
-      <a href="/authorization-reset-pass.html" class="authorization__link">Lost password?</a>
-    </div>
+  <div class="auth-reset-password-check-email__button">
+    <div class="ricoh-button ricoh-button_red">Open email app</div>
   </div>
 
-  <div class="auth-log-in__button">
-    <div class="ricoh-button ricoh-button_red">Log in</div>
-  </div>
-
-  <div class="auth-log-in__sign-up">
-    <a href="/" class="auth-log-in__sign-up-link">Don’t have an account? <span class="auth-log-in__sing-up-bold">Sign up</span></a>
+  <div class="auth-reset-password-check-email__check-spam">
+    <a href="/authorization-log-in.html" class="auth-reset-password-check-email__check-spam-link">Didn’t receive the email? Check your spam folder, or try another email address</a>
   </div>
 </section>
 
